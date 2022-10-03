@@ -1,0 +1,25 @@
+{:paths   ["src" "resources"]
+ :deps    {org.clojure/core.async              {:mvn/version "1.5.648"}
+           dev.kwill/aws-api-ext               {:mvn/version "0.1.8"}
+           dev.kwill/anomkit                   {:mvn/version "1.0.1"}
+           camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"}
+           metosin/malli                       {:mvn/version "0.8.9"}
+           gcp-api/gcp-api                     {:mvn/version "1.0.55"}
+           com.climate/claypoole               {:mvn/version "1.1.4"}
+           com.ardoq/azure-api                 {:git/url "https://github.com/ardoq/azure-api.git"
+                                                :sha     "2f5a3bf5a023597fad198a20ba61ebd4b6c8a741"}
+           compute.gcp-api/cloudbilling        {:git/url   "git@github.com:ComputeSoftware/gcp-api-descriptors.git"
+                                                :sha       "42bf4395c2e73ec4db806c4c0a0677fb39059627"
+                                                :deps/root "cloudbilling/v1"}}
+ :aliases {:dev  {:extra-paths ["dev" ".dev-local"]
+                  :extra-deps  {com.cognitect.aws/api          {:mvn/version "0.8.589"}
+                                com.cognitect.aws/endpoints    {:mvn/version "1.1.12.280"}
+                                com.cognitect.aws/sts          {:mvn/version "822.2.1145.0"}
+                                com.cognitect.aws/s3           {:mvn/version "822.2.1145.0"}
+                                com.amazonaws/aws-java-sdk-sts {:mvn/version "1.12.290"}
+                                com.datomic/client-cloud       {:mvn/version "1.0.119"}
+                                com.datomic/dev-local          {:mvn/version "1.0.242"}}}
+           :test {:extra-paths ["test"]
+                  :extra-deps  {org.clojure/test.check {:mvn/version "1.1.1"}
+                                provisdom/test         {:git/url "https://github.com/Provisdom/test.git"
+                                                        :sha     "c12852d4dbe90ed5a6a8675618cfbf49eed60970"}}}}}
